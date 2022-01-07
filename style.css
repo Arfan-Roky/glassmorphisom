@@ -1,0 +1,163 @@
+/*  google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(assets/laptop-1.jpg);
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rgb(223, 126, 126), rgb(142, 142, 224));
+  backdrop-filter: blur(50px);
+  border-radius: 50%;
+  z-index: -1;
+}
+body::after {
+  content: '';
+  position: absolute;
+  right: 250px;
+  bottom: 200px;
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(to right,black,white);
+  backdrop-filter: blur(50px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(214, 214, 214, 0.1)
+  );
+}
+
+.logo{
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+ul li {
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 4px;
+  transition: background 0.5s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 3px;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg,white,black);
+  transform: scaleX(0);
+  transition: transform 150ms ease-in-out;
+}
+
+ul li:hover::before,
+ul li:focus::before{
+  transform: scaleX(1);
+}
+
+section {
+  width: 100%;
+  min-height: 90vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  z-index: 1000;
+}
+
+img {
+  width: 100%;
+  opacity: 0.7;
+  border-radius: 10px;
+  border: 10px solid rgba(255, 255, 255, 0.4);
+}
+.similar-width {
+  width: 40%;
+}
+
+.laptopIcon{
+  display: inline-block;
+  text-align: center;
+  font-size: 6rem;
+  color: white;
+  background: transparent;
+}
+
+.heading{
+  font-size: 1.8rem;
+  color:rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+}
+
+small{
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 4px 8px ;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.description{
+  margin: 18px 0;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  padding-left: 8px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.4;
+  z-index: 1000;
+}
+
+.profileBtn{
+  text-decoration: none;
+  padding: 4px 10px;
+  background: linear-gradient(rgba(214, 214, 214, 0.2), rgba(0,0,0,0.2));
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+}
